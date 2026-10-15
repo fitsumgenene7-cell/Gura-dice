@@ -2,7 +2,9 @@
 
 An ultra-smooth, lightweight, and mobile-optimized 3D rolling dice component built with **React**, **Tailwind CSS**, and **pure CSS 3D transforms** (`preserve-3d`). Styled in Gura's signature luxury dark obsidian and metallic warm gold aesthetic.
 
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy)
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new)
+![Netlify](https://img.shields.io/badge/Netlify-00C7B7?logo=netlify&logoColor=white)
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-06B6D4?logo=tailwindcss&logoColor=white)
@@ -86,16 +88,33 @@ export default function MyGame() {
 
 ---
 
-## 🌐 Deploy to Vercel
+## 🌐 Deployment
+ 
+### Deploy to Netlify (Recommended)
 
-This repository is pre-configured and 100% deploy-ready for [Vercel](https://vercel.com):
+This repository includes first-class Netlify configuration (`netlify.toml` and `public/_redirects`):
 
-1. Push your repository to GitHub.
-2. Go to [vercel.com/new](https://vercel.com/new) and import `Gura-dice`.
-3. Vercel automatically detects the Vite framework and applies the settings in `vercel.json`.
-4. Click **Deploy**!
+1. Push your changes to GitHub:
+   ```bash
+   git push origin main
+   ```
+2. In [Netlify Dashboard](https://app.netlify.com), click **"Add new site"** &gt; **"Import an existing project"**.
+3. Select your GitHub repository (`Gura-dice`).
+4. Netlify will auto-detect settings from `netlify.toml`:
+   - **Build command**: `npm run build`
+   - **Publish directory**: `dist`
+5. Click **Deploy Gura-dice**!
 
-Alternatively, deploy via the Vercel CLI:
+Alternatively, deploy using the Netlify CLI:
+```bash
+npx netlify deploy --prod
+```
+
+---
+
+### Deploy to Vercel
+
+Also pre-configured for Vercel via `vercel.json`:
 ```bash
 npx vercel
 ```
