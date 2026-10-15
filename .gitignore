@@ -12,6 +12,7 @@ dist
 dist-ssr
 *.local
 .vercel
+.netlify
 
 # Editor directories and files
 .vscode/*
